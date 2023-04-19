@@ -5,6 +5,9 @@
     "paths": {
       "@tots/notification": [
         "dist/tots/notification"
+      ],
+      "@tots/notification-core": [
+        "dist/tots/notification-core"
       ]
     },
     "baseUrl": "./",

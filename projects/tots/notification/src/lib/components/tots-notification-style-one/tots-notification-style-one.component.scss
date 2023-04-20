@@ -1,6 +1,6 @@
 @mixin xs { @media (max-width: 599.98px)  { @content; } }
 
-        .notification {
+.notification {
           cursor: pointer;
           display: flex;
           align-items: flex-start;
@@ -82,9 +82,45 @@
               color: var(--color_neutral_40);
             }
           }
+    
+          .user-element {
+            width: 40px;
+            min-width: 40px;
+            max-width: 40px;
+            height: 40px;
+            min-height: 40px;
+            max-height: 40px;
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            span {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                font-weight: 600;
+                color: var(--color_neutral_20);
+                font-size: 14px;
+                letter-spacing: 0;
+            }
         }
+}
   
-        .notification-unread {
+.notification-unread {
           background-color: #fffef0;
   
           &:hover {
@@ -97,5 +133,5 @@
   
           .notification__status {
             background-color: var(--color_secundary_60);
-          }
-        }
+    }
+}

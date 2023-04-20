@@ -1,6 +1,17 @@
 <div class="notification" [ngClass]="{'notification-unread': notification.is_read == 0}" (click)="onCLickNotification()">
     <div *ngIf="notification.is_read == 0" class="notification__status" (click)="onClickRead(); $event.stopPropagation()"></div>
-    <div *ngIf="notification.photo != undefined && notification.photo != ''" class="image" matTooltip="{{notification.photoTooltip}}"> <img [src]="notification.photo" alt="" /></div>
+
+    <!-- Image photo normal -->
+    <div *ngIf="notification.photo != undefined && notification.photo != '' && (notification.photoIsCircle == false||notification.photoIsCircle == undefined)" class="image" matTooltip="{{notification.photoTooltip}}">
+        <img [src]="notification.photo" alt="" />
+    </div>
+
+    <!-- Image photo for users / circle mode -->
+    <div *ngIf="notification.photoIsCircle" class="user-element">
+        <img *ngIf="notification.photo != undefined && notification.photo != ''" [src]="notification.photo" alt="" onerror="this.style.display='none';" />
+        <span *ngIf="(notification.photo == undefined||notification.photo == '') && notification.photoAvatarLetters != '' && notification.photoAvatarLetters != undefined" [ngStyle]="{backgroundColor: backgroundColors[randomNumber]}">{{notification.photoAvatarLetters}}</span>
+    </div>
+
     <div class="texts">
         <div class="notification__name">{{notification.title}} <small *ngIf="notification.created_at != ''" class="notification__time">- {{notification.created_at| date:'h:mm a'}}</small></div>
         <div class="notification__message">{{notification.caption}}</div>

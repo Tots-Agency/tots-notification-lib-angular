@@ -16,6 +16,6 @@ export class AppComponent {
     this.notification.caption = 'A new furniture Lead #25 has been arrived and require review';
     this.notification.created_at = '2023-05-25 18:00:00';
     this.notification.photoTooltip = 'Sales Module';
-    //this.notification.photo = 'https://gentle-field-01a36a00f-development.eastus2.2.azurestaticapps.net/assets/img/icons-modules/016-stock exchange app.svg';
+    this.notification.photo = 'https://gentle-field-01a36a00f-development.eastus2.2.azurestaticapps.net/assets/img/icons-modules/016-stock exchange app.svg';
   }
 }

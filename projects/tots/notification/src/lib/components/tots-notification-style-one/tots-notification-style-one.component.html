@@ -1,6 +1,6 @@
 <div class="notification" [ngClass]="{'notification-unread': notification.is_read == 0}" (click)="onCLickNotification()">
     <div *ngIf="notification.is_read == 0" class="notification__status" (click)="onClickRead(); $event.stopPropagation()"></div>
-    <div *ngIf="notification.photo != undefined && notification.photo != ''" class="image"> <img [src]="notification.photo" alt="" /></div>
+    <div *ngIf="notification.photo != undefined && notification.photo != ''" class="image" matTooltip="{{notification.photoTooltip}}"> <img [src]="notification.photo" alt="" /></div>
     <div class="texts">
         <div class="notification__name">{{notification.title}} <small *ngIf="notification.created_at != ''" class="notification__time">- {{notification.created_at| date:'h:mm a'}}</small></div>
         <div class="notification__message">{{notification.caption}}</div>

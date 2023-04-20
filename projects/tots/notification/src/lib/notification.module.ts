@@ -2,6 +2,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+/** Angular Material */
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 /** Styles */
 import { TotsNotificationStyleOneComponent } from './components/tots-notification-style-one/tots-notification-style-one.component';
 
@@ -14,7 +17,10 @@ import { TotsNotificationStyleOneComponent } from './components/tots-notificatio
   ],
   imports: [
     /** Angular Core */
-    CommonModule
+    CommonModule,
+
+    /** Angular Material */
+    MatTooltipModule,
   ],
   exports: [
     /** Styles */

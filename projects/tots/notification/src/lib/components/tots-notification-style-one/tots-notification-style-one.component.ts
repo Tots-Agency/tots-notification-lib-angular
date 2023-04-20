@@ -4,7 +4,7 @@ import { TotsNotification } from '@tots/notification-core';
 @Component({
   selector: 'tots-notification-style-one',
   templateUrl: './tots-notification-style-one.component.html',
-  styleUrls: ['./tots-notification-style-one.component.css']
+  styleUrls: ['./tots-notification-style-one.component.scss']
 })
 export class TotsNotificationStyleOneComponent {
   @Input() notification!: TotsNotification;
@@ -12,6 +12,7 @@ export class TotsNotificationStyleOneComponent {
   @Output() readNot = new EventEmitter<TotsNotification>();
 
   onCLickNotification() {
+    this.notification.is_read = 1;
     this.clickNot.emit(this.notification);
   }
 

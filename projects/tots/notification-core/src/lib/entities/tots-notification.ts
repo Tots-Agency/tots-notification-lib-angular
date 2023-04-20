@@ -13,4 +13,6 @@ export class TotsNotification {
     path?: string = "";
     breadcrumb?: string = "";
     created_at: string = "";
+
+    photoTooltip?: string = "";
 }

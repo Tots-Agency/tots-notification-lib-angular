@@ -1,29 +1,5 @@
-.notifications {
-    width: 1000px;
-  
-    .header-title {
-      display: flex;
-      align-items: center;
-      margin-bottom: 3em;
-  
-      h1 {
-        margin: 0;
-        margin-right: auto;
-      }
-    }
-  
-    .container-notifications {
-      .section-day {
-        margin-bottom: 2em;
-  
-        .day{
-          padding: 0 1.25em;
-          font-size: 0.8em;
-          margin: 0;
-          text-transform: uppercase;
-          letter-spacing: 0.25px;
-        }
-  
+@mixin xs { @media (max-width: 599.98px)  { @content; } }
+
         .notification {
           cursor: pointer;
           display: flex;
@@ -123,7 +99,3 @@
             background-color: var(--color_secundary_60);
           }
         }
-      }
-    }
-  }
-  

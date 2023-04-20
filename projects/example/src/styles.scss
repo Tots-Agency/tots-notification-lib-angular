@@ -1,1 +1,147 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    /* Sidebar */
+    --sidebar_width: 60px;
+    --sidebar_width_open: 240px;
+  
+    /* Animations */
+    --animation_slow: all 0.6s ease;
+    --animation: all 0.4s ease;
+    --animation_fast: all 0.2s ease;
+  
+    // Typography
+    --font_title: "Poppins", sans-serif;
+    --font_text: "Poppins", sans-serif;
+  
+    // Colors
+    --color_primary: #00C1D4;
+    --color_secondary: #8BC640;
+    --color_tertiary: #8490b2;
+    --color_neutral: #8e9192;
+    --color_background: #F3F4F8;
+    --color_background_hover: #e1e3e9;
+    --color_warning: #f39200;
+    --color_warning_hover: #f18a00;
+  
+    --color_primary_0:   #000000;
+    --color_primary_10:  #001F24;
+    --color_primary_20:  #00363C;
+    --color_primary_25:  #00424A;
+    --color_primary_30:  #004F57;
+    --color_primary_35:  #005b65;
+    --color_primary_40:  #006973;
+    --color_primary_50:  #008491;
+    --color_primary_60:  #00A0B0;
+    --color_primary_70:  #00BDCF;
+    --color_primary_80:  #3FD9EC;
+    --color_primary_90:  #94F1FF;
+    --color_primary_95:  #CFF8FF;
+    --color_primary_98:  #ECFCFF;
+    --color_primary_99:  #F6FEFF;
+    --color_primary_100: #FFFFFF;
+  
+    --color_secundary_0:   #000000;
+    --color_secundary_10:  #102000;
+    --color_secundary_20:  #1F3700;
+    --color_secundary_25:  #274300;
+    --color_secundary_30:  #2F4F00;
+    --color_secundary_35:  #385C00;
+    --color_secundary_40:  #406900;
+    --color_secundary_50:  #528400;
+    --color_secundary_60:  #68A01A;
+    --color_secundary_70:  #81BC36;
+    --color_secundary_80:  #9CD850;
+    --color_secundary_90:  #B6F569;
+    --color_secundary_95:  #D2FF9A;
+    --color_secundary_98:  #F0FFD7;
+    --color_secundary_99:  #F9FFE8;
+    --color_secundary_100: #FFFFFF;
+  
+    /* --color_tertiary_0:   #000000;
+    --color_tertiary_10:  #0E1B37;
+    --color_tertiary_20:  #24304D;
+    --color_tertiary_25:  #2F3B58;
+    --color_tertiary_30:  #3A4664;
+    --color_tertiary_35:  #465271;
+    --color_tertiary_40:  #525E7D;
+    --color_tertiary_50:  #6B7797;
+    --color_tertiary_60:  #8490B2;
+    --color_tertiary_70:  #9FABCE;
+    --color_tertiary_80:  #BAC6EA;
+    --color_tertiary_90:  #D9E2FF;
+    --color_tertiary_95:  #EEF0FF;
+    --color_tertiary_98:  #FAF8FF;
+    --color_tertiary_99:  #FEFBFF;
+    --color_tertiary_100: #FFFFFF; */
+  
+    --color_error_0:   #000000;
+    --color_error_10:  #410002;
+    --color_error_20:  #690005;
+    --color_error_25:  #7e0007;
+    --color_error_30:  #93000a;
+    --color_error_35:  #a80710;
+    --color_error_40:  #ba1a1a;
+    --color_error_50:  #de3730;
+    --color_error_60:  #ff5449;
+    --color_error_70:  #ff897d;
+    --color_error_80:  #ffb4ab;
+    --color_error_90:  #ffdad6;
+    --color_error_95:  #ffedea;
+    --color_error_98:  #fff8f7;
+    --color_error_99:  #fffbff;
+    --color_error_100: #ffffff;
+  
+    --color_neutral_0:   #000000;
+    --color_neutral_10:  #191C1D;
+    --color_neutral_20:  #2e3132;
+    --color_neutral_25:  #393C3D;
+    --color_neutral_30:  #444748;
+    --color_neutral_35:  #505354;
+    --color_neutral_40:  #5C5F5F;
+    --color_neutral_50:  #747878;
+    --color_neutral_60:  #8E9192;
+    --color_neutral_70:  #A9ACAC;
+    --color_neutral_80:  #C4C7C7;
+    --color_neutral_90:  #E1E3E3;
+    --color_neutral_95:  #EFF1F1;
+    --color_neutral_98:  #F8FAFA;
+    --color_neutral_99:  #FAFDFD;
+    --color_neutral_100: #FFFFFF;
+  
+    --color_neutral_variant_0:   #000000;
+    --color_neutral_variant_10:  #141D1F;
+    --color_neutral_variant_20:  #293233;
+    --color_neutral_variant_25:  #343D3F;
+    --color_neutral_variant_30:  #3F484A;
+    --color_neutral_variant_35:  #4B5456;
+    --color_neutral_variant_40:  #576062;
+    --color_neutral_variant_50:  #6F797A;
+    --color_neutral_variant_60:  #899294;
+    --color_neutral_variant_70:  #A3ADAF;
+    --color_neutral_variant_80:  #BFC8CA;
+    --color_neutral_variant_90:  #DBE4E6;
+    --color_neutral_variant_95:  #E9F2F4;
+    --color_neutral_variant_98:  #F1FBFD;
+    --color_neutral_variant_99:  #F6FEFF;
+    --color_neutral_variant_100: #FFFFFF;
+  
+    // Surfaces
+    --surface_low: rgba(177, 177, 177, 0.1);
+    --surface_medium: rgba(46, 46, 46, 0.25);
+    --surface_high: rgba(16, 16, 16, 0.5);
+  
+    // Borders
+    --border_low: 1px solid var(--color_neutral_20);
+    --border_medium: 1px solid var(--color_neutral_30);
+  
+    // Shadows
+    --box_shadow_low: 0px 6px 24px 0px rgba(0, 0, 0, 0.25);
+    --box_shadow_medium: none;
+    --box_shadow_high: 0px 11px 45px 0px rgba(0, 0, 0, 0.65);
+    --box_shadow_low_inset: inset 0px 0px 24px 0px rgba(0, 0, 0, 0.1);
+  
+    // Padding
+    --padding_navbar: 5em;
+  }
+  

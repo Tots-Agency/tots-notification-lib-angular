@@ -1,0 +1,16 @@
+<div class="tots-notifications">
+    <div class="tots-not-header-title">
+        <h1 class="mat-headline-3"><b>{{title}}</b></h1>
+        <button mat-button color="primary" (click)="onClickReadAll()">Mark all as read </button>
+    </div>
+
+    <div *ngIf="!isLoading" class="container-notifications">
+        <div class="section-day" *ngFor="let day of data">
+            <h2 class="mat-h2 day component-animation"> {{ day.date | date }} </h2>
+
+            <tots-notification-style-one *ngFor="let not of day.items" [notification]="not"></tots-notification-style-one>
+        </div>
+    </div>
+
+    <tots-loading-factory *ngIf="isLoading" [type]="typeLoading" [color]="colorLoading" [isFullPage]="true"></tots-loading-factory>
+</div>

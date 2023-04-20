@@ -1,3 +1,14 @@
 <router-outlet></router-outlet>
 
 <tots-notification-style-one [notification]="notification"></tots-notification-style-one>
+
+<div style="display: flex; align-items: end; justify-content: end;">
+  <button mat-icon-button [matMenuTriggerFor]="toolbarNotifications" matTooltip="Notifications">
+    <mat-icon [matBadge]="5">notifications_active</mat-icon>
+  </button>  
+</div>
+
+<!-- Menu Notifications -->
+<mat-menu #toolbarNotifications="matMenu" [classList]="'tots-menu-notifications'" class="mat-menu-toolbar-notifications" style="min-width: 510px;">
+    <tots-date-group-topbar-notification [notifications]="nots" [isLoading]="isLoading"></tots-date-group-topbar-notification>
+</mat-menu>

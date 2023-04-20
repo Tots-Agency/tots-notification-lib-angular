@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TotsNotificationModule } from 'projects/tots/notification/src/public-api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -13,9 +17,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+
+    MatButtonModule,
+    MatIconModule,
+    MatBadgeModule,
+    MatMenuModule,
 
     TotsNotificationModule,
-     BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

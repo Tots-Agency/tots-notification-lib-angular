@@ -6,8 +6,8 @@ export class TotsNotification {
     item_id: number = 0;
     data: any;
     caption: string = "";
-    is_read?: boolean = false;
-    is_email?: boolean = false;
+    is_read: number = 0;
+    is_email: number = 0;
     title: string = "";
     photo?: string = "";
     path?: string = "";

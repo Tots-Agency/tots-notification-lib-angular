@@ -15,4 +15,6 @@ export class TotsNotification {
     created_at: string = "";
 
     photoTooltip?: string = "";
+    photoIsCircle?: boolean = false;
+    photoAvatarLetters?: string = "";
 }

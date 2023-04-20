@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build2": "ng build --project=@tots/notification-core --configuration production && cd dist/tots/notification-core/ && npm publish --access public",
+    "build3": "ng build --project=@tots/notification --configuration production && cd dist/tots/notification/ && npm publish --access public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

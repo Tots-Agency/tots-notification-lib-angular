@@ -16,6 +16,8 @@ export class TotsDateGroupTopbarNotificationComponent implements OnInit, OnChang
   colorLoading = '#80bc00';
 
   @Output() clickReadAll = new EventEmitter<boolean>();
+  @Output() clickNot = new EventEmitter<TotsNotification>();
+  @Output() readNot = new EventEmitter<TotsNotification>();
 
   data = new Array<{ date: string, items: Array<TotsNotification> }>
 
@@ -32,6 +34,14 @@ export class TotsDateGroupTopbarNotificationComponent implements OnInit, OnChang
   onClickReadAll() {
     this.notifications.forEach((item) => item.is_read = 1);
     this.clickReadAll.emit(true);
+  }
+
+  onClickNotification(not: TotsNotification) {
+    this.clickNot.emit(not);
+  }
+
+  onClickRead(not: TotsNotification) {
+    this.readNot.emit(not);
   }
 
   processItems() {

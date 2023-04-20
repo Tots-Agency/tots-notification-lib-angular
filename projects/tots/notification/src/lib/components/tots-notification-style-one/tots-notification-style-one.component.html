@@ -1,4 +1,4 @@
-<div class="notification" [ngClass]="{'notification-unread': notification.is_read == 0}" (click)="onCLickNotification()">
+<div class="notification" [ngClass]="{'notification-unread': notification.is_read == 0}" (click)="onClickNotification()">
     <div *ngIf="notification.is_read == 0" class="notification__status" (click)="onClickRead(); $event.stopPropagation()"></div>
 
     <!-- Image photo normal -->

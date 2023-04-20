@@ -18,7 +18,7 @@ export class TotsNotificationStyleOneComponent implements OnInit {
     this.processRandomNumber();
   }
 
-  onCLickNotification() {
+  onClickNotification() {
     this.notification.is_read = 1;
     this.clickNot.emit(this.notification);
   }

@@ -8,7 +8,7 @@
         <div class="section-day" *ngFor="let day of data">
             <h2 class="mat-h2 day component-animation"> {{ day.date | date }} </h2>
 
-            <tots-notification-style-one *ngFor="let not of day.items" [notification]="not"></tots-notification-style-one>
+            <tots-notification-style-one *ngFor="let not of day.items" [notification]="not" (clickNot)="onClickNotification($event)" (readNot)="onClickRead($event)"></tots-notification-style-one>
         </div>
     </div>
 

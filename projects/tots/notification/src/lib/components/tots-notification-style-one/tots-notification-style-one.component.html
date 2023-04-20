@@ -1,0 +1,8 @@
+<div class="notification" [ngClass]="{'notification-unread': notification.is_read == 1}" (click)="onCLickNotification()">
+    <div class="notification__status" (click)="onClickRead(); $event.stopPropagation()"></div>
+    <div class="image" matTooltip="Sales Module"> <img src="/assets/img/icons-modules/016-stock exchange app.svg" alt="" /></div>
+    <div class="texts">
+        <div class="notification__name">New Furniture Lead <small class="notification__time">{{notification.created_at| date:'h:mm a z'}}</small></div>
+        <div class="notification__message">A new furniture Lead #[id_lead] has been arrived and require review</div>
+    </div>
+</div>
